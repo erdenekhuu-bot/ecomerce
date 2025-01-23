@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demo{% endblock %}
+
+{% block body %}
+    <h1>Demo</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ demo.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_demo_index') }}">back to list</a>
+
+    <a href="{{ path('app_demo_edit', {'id': demo.id}) }}">edit</a>
+
+    {{ include('demo/_delete_form.html.twig') }}
+{% endblock %}
